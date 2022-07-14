@@ -30,8 +30,10 @@ const PORT = 4000; // backend routing port
 const lookup = async () => { 
     const url = 'https://www.carmax.com/car/22967788';
     const res = await axios({url})
-    const b = cheerio.load(res.data)
-    return b.text()
+    const info = cheerio.load(res.data)
+    const findMe = info('.price-mileage__car-title__year-make')
+    return findMe.text()
+
 
     await axios(url).then((response) => {
         const htmlData = response.data;
