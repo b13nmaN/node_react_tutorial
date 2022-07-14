@@ -3,11 +3,11 @@ import './App.css';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Tweet from './components/Tweet';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
           <Nav />
           <Switch>
@@ -15,7 +15,7 @@ function App() {
             <Route path="/tweets" exact component={Tweet} />
           </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
