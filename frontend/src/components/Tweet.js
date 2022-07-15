@@ -13,10 +13,12 @@ function Tweet() {
         const items = await data.json();
         console.log(items)
         setItems(items.result);
+
     };
 
     return(
         <section>
+            
                 <div className="container-fluid p-3 w-50">
                     <p>
                        {items}
